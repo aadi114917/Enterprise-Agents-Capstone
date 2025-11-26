@@ -27,20 +27,31 @@ enterprise-agent/
 │── LICENSE
 │── .gitignore
 ---
+agent.py
+class EnterpriseAgent:
+    def __init__(self):
+        self.state = {}
 
-## ▶️ How to Run
+    def fetch_data(self, source):
+        return f"Fetched data from {source}"
 
-pip install -r requirements.txt
-python src/agent_core.py
+    def process(self, data):
+        return f"Processed: {data}"
+
+    def generate_report(self, processed):
+        return f"Report Generated: {processed}"
+
+    def run(self, source):
+        raw = self.fetch_data(source)
+        processed = self.process(raw)
+        report = self.generate_report(processed)
+        return report
 
 
----
+if __name__ == "__main__":
+    agent = EnterpriseAgent()
+    print(agent.run("Internal Database"))
+[Workflow Image]
+User Input → Data Fetch → Processing Engine → Decision Engine → Report Generator → Output
 
-## 🔗 Kaggle Submission
-Paste your Kaggle notebook link here after uploading.
-
----
-
-## 🖼 Thumbnail / Demo Image
-(You can add images later)
 
