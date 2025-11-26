@@ -1,1 +1,8 @@
+langchain
+google-generativeai
+fastapi
+uvicorn
+faiss-cpu
+python-dotenv
+requests
 
