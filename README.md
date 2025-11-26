@@ -51,6 +51,12 @@ class EnterpriseAgent:
 if __name__ == "__main__":
     agent = EnterpriseAgent()
     print(agent.run("Internal Database"))
+
+
+
+if __name__ == "__main__":
+    agent = EnterpriseAgent()
+    print(agent.run("Internal Database"))
 [Workflow Image]
 User Input → Data Fetch → Processing Engine → Decision Engine → Report Generator → Output
 
